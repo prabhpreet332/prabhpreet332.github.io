@@ -2,7 +2,8 @@ baseURL: "https://prabhpreet332.github.io/prabhpreet332.github.io"
 languageCode: en-us
 title: "Prabhpreet Singh"
 theme: "PaperMod"
-paginate: 3
+pagination:
+  pagerSize: 3
 
 enableRobotsTXT: true
 buildDrafts: false
