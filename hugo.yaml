@@ -24,8 +24,8 @@ params:
   uselatex: yes
   label:
     text: "Home"
-    # icon: /static/images/profile_pic_bw.jpeg
-    iconHeight: 35
+    # icon: images/profile_pic_bw.jpeg
+    # iconHeight: 35
   
   copyright: © 2024 Prabhpreet Singh
   copyrightUrl: https://www.prabhpreet332.github.io.com
@@ -47,11 +47,11 @@ params:
   tocopen: false
 
   assets:
-    favicon: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/favicon.png"
-    favicon16x16: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/favicon.png"
-    favicon32x32: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/favicon.png"
-    apple_touch_icon: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/favicon.png"
-    safari_pinned_tab: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/favicon.png"
+    favicon: "images/favicon.png"
+    favicon16x16: "images/favicon.png"
+    favicon32x32: "images/favicon.png"
+    apple_touch_icon: "images/favicon.png"
+    safari_pinned_tab: "images/favicon.png"
 
   homeInfoParams:
     Title: "Hi there \U0001F44B"
@@ -60,7 +60,7 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/psinghoff332/"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/prabhpreet332"
     - name: cv
       url: "mailto:prabh.referral+blog@gmail.com?subject=Share%20CV&body=Hey%20Prabh%2C%0A%0AI%20would%20want%20to%20check%20out%20your%20resume.%20Please%20share%20one%20at%20your%20earliest%20convenience%20by%20replying%20to%20this%20email.%20%0A%0AThanks%0A%5B%5BYour%20Name%5D%5D%0A"
     - name: email
@@ -85,15 +85,15 @@ params:
     enabled: true # needs to be explicitly set
     title: Prabhpreet Singh
     subtitle: "Hey there \U0001F44B, Welcome to my Digital home !!!"
-    imageUrl: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/static/images/profile_pic_bw.jpg"
+    imageUrl: "images/profile_pic_bw.jpg"
     imageWidth: 120
     imageHeight: 120
     imageTitle: "Hey, That's me !!"
     buttons:
       - name: Posts
         url: posts
-      - name: Tags
-        url: tags
+      - name: About Me
+        url: about
   markup:
     highlight:
       anchorLineNos: false

@@ -82,7 +82,7 @@ print("hello")
 
 https://stackoverflow.com/questions/71501256/how-to-insert-an-image-in-my-post-on-hugo
 
-![some image](/static/images/favicon.png)
+![some image](favicon.png)
 ![another image](./favicon.png)
 
 https://gohugo.io/content-management/image-processing/
