@@ -1,13 +1,143 @@
-baseURL: "https://prabhpreet332.github.io/prabhpreet332.github.io" 
+baseURL: "https://prabhpreet332.github.io/prabhpreet332.github.io"
 languageCode: en-us
-title: "Prabh's Blog"
+title: "Prabhpreet Singh"
 theme: "PaperMod"
+pagination:
+  pagerSize: 3
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+
+
+params:
+  GlobalValues:
+    linkedin: &linkedin-url "https://www.linkedin.com/in/psinghoff332/"
+  env: production
+  keywords: [Blog, Portfolio, PaperMod]
+  # author: Me
+  author: ["Prabhpreet Singh"] # multiple authors
+  DateFormat: "2 January 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  # summaryLength: 3
+  posts_navigation: yes
+  enableEmoji: yes
+  uselatex: yes
+  label:
+    text: "Home"
+    # icon: images/profile_pic_bw.jpeg
+    # iconHeight: 35
+
+  copyright: © 2024 Prabhpreet Singh
+  copyrightUrl: https://www.prabhpreet332.github.io.com
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    favicon: "images/favicon.png"
+    favicon16x16: "images/favicon.png"
+    favicon32x32: "images/favicon.png"
+    apple_touch_icon: "images/favicon.png"
+    safari_pinned_tab: "images/favicon.png"
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: "Welcome to my blog"
+  socialIcons:
+    - name: linkedin
+      url: *linkedin-url
+      # https://stackoverflow.com/questions/39282485/can-i-anchor-individual-items-in-a-yaml-collection
+      # https://stackoverflow.com/questions/60992314/can-i-assign-a-yaml-anchor-without-assigning-it-to-a-key
+    - name: github
+      url: "https://github.com/prabhpreet332"
+    - name: cv
+      url: "mailto:prabh.referral+resume@gmail.com?subject=Share%20CV&body=Hey%20Prabh%2C%0A%0AI%20would%20want%20to%20check%20out%20your%20resume.%20Please%20share%20one%20at%20your%20earliest%20convenience%20by%20replying%20to%20this%20email.%20%0A%0AThanks%0A%5B%5BYour%20Name%5D%5D%0A"
+    - name: email
+      url: "mailto:prabh.referral+blog@gmail.com"
+    - name: x
+      url: "https://x.com/ThisIsP_S_"
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/prabhpreet332/prabhpreet332.github.io/tree/master/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  analytics:
+    google:
+      SiteVerificationTag: "G-R8M8R76LD5"
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Prabhpreet Singh
+    subtitle: "Hey there \U0001F44B, Welcome to my Digital home !!!"
+    imageUrl: "images/profile_pic_bw.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Hey, That's me !!"
+    buttons:
+      - name: Posts
+        url: posts
+      - name: About Me
+        url: about
+  markup:
+    highlight:
+      anchorLineNos: false
+      codeFences: true
+      guessSyntax: true
+      hl_Lines: ""
+      hl_inline: false
+      lineAnchors: ""
+      lineNoStart: 1
+      lineNos: true
+      lineNumbersInTable: true
+      noClasses: true
+      noHl: false
+      style: monokai
+      tabWidth: 4
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+minify:
+  disableXML: true
+  minifyOutput: true
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: blog
+      name: Blog
+      url: /posts/
       weight: 10
+    - identifier: notes
+      name: Notes
+      url: /notes/
+      weight: 20
     - identifier: tags
       name: Tags
       url: /tags/
@@ -16,3 +146,21 @@ menu:
       name: Archives
       url: /archives/
       weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+# server:
+#   headers:
+#   - for: /**
+#     values:
+#       Content-Security-Policy: script-src localhost:1313
+#       Referrer-Policy: strict-origin-when-cross-origin
+#       X-Content-Type-Options: nosniff
+#       X-Frame-Options: DENY
+#       X-XSS-Protection: 1; mode=block
