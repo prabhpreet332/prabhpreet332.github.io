@@ -18,6 +18,7 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  # summaryLength: 3
   posts_navigation: yes
   enableEmoji: yes
   uselatex: yes
@@ -90,7 +91,7 @@ params:
     imageTitle: "Hey, That's me !!"
     buttons:
       - name: Posts
-        url: post
+        url: posts
       - name: Tags
         url: tags
   markup:
