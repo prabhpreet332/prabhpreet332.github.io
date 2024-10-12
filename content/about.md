@@ -3,7 +3,7 @@ showToc = false
 
 disableShare = true
 hideSummary = true
-searchHidden = false
+searchHidden = true
 ShowReadingTime = false
 ShowBreadCrumbs = false
 ShowPostNavLinks = true

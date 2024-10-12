@@ -33,7 +33,6 @@ UseHugoToc = true
 
 
 
-# Heading
 ## sub heading
 
 some text
@@ -42,7 +41,7 @@ some text
 2. point 2
 
 <!-- ,hl_lines=[2,"5-7"],linenostart=199 -->
-```python  {linenos=table}
+```python  {linenos=table,linenostart=199}
 print("hello")
 print("hello")
 print("hello")
@@ -57,11 +56,11 @@ print("hello")
 print("hello")
 ```
 
-#### another heading
+### another heading
 - some more point
 - and another
 
-{{< highlight python  >}}
+{{< highlight python "linenos=table,hl_lines=[2,"5-7"],linenostart=199" >}}
 print("hello")
 print("hello")
 print("hello")
@@ -70,5 +69,5 @@ print("hello")
 print("hello")
 print("hello")
 {{< / highlight >}}
+#### another heading 2
 
-<script src="https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3.js"></script>
