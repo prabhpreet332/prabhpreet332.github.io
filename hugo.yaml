@@ -1,4 +1,4 @@
-baseURL: "https://prabhpreet332.github.io/prabhpreet332.github.io" 
+baseURL: "https://prabhpreet332.github.io/prabhpreet332.github.io"
 languageCode: en-us
 title: "Prabhpreet Singh"
 theme: "PaperMod"
@@ -9,7 +9,11 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+
+
 params:
+  GlobalValues:
+    linkedin: &linkedin-url "https://www.linkedin.com/in/psinghoff332/"
   env: production
   keywords: [Blog, Portfolio, PaperMod]
   # author: Me
@@ -26,7 +30,7 @@ params:
     text: "Home"
     # icon: images/profile_pic_bw.jpeg
     # iconHeight: 35
-  
+
   copyright: © 2024 Prabhpreet Singh
   copyrightUrl: https://www.prabhpreet332.github.io.com
 
@@ -58,11 +62,13 @@ params:
     Content: "Welcome to my blog"
   socialIcons:
     - name: linkedin
-      url: "https://www.linkedin.com/in/psinghoff332/"
+      url: *linkedin-url
+      # https://stackoverflow.com/questions/39282485/can-i-anchor-individual-items-in-a-yaml-collection
+      # https://stackoverflow.com/questions/60992314/can-i-assign-a-yaml-anchor-without-assigning-it-to-a-key
     - name: github
       url: "https://github.com/prabhpreet332"
     - name: cv
-      url: "mailto:prabh.referral+blog@gmail.com?subject=Share%20CV&body=Hey%20Prabh%2C%0A%0AI%20would%20want%20to%20check%20out%20your%20resume.%20Please%20share%20one%20at%20your%20earliest%20convenience%20by%20replying%20to%20this%20email.%20%0A%0AThanks%0A%5B%5BYour%20Name%5D%5D%0A"
+      url: "mailto:prabh.referral+resume@gmail.com?subject=Share%20CV&body=Hey%20Prabh%2C%0A%0AI%20would%20want%20to%20check%20out%20your%20resume.%20Please%20share%20one%20at%20your%20earliest%20convenience%20by%20replying%20to%20this%20email.%20%0A%0AThanks%0A%5B%5BYour%20Name%5D%5D%0A"
     - name: email
       url: "mailto:prabh.referral+blog@gmail.com"
     - name: x
@@ -80,7 +86,7 @@ params:
   analytics:
     google:
       SiteVerificationTag: "G-R8M8R76LD5"
-  
+
   profileMode:
     enabled: true # needs to be explicitly set
     title: Prabhpreet Singh
