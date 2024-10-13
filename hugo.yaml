@@ -14,11 +14,22 @@ buildExpired: false
 
 params:
   GlobalValues:
-    linkedin: &linkedin-url "https://www.linkedin.com/in/psinghoff332/"
+    socials:
+      linkedin: &linkedin-url "https://www.linkedin.com/in/psinghoff332/"
+    personal:
+      full-name: &full-name "Prabhpreet Singh"
+      first-name: Prabhpreet
+      last-name: Singh
+      short-name: Prabh
+      total-years-of-experience: "3+"
+    repository-management:
+      blog-github-issues-url: "https://github.com/prabhpreet332/prabhpreet332.github.io/issues"
+      blog-github-discussions-url: "https://github.com/prabhpreet332/prabhpreet332.github.io/discussions"
+
   env: production
   keywords: [Blog, Portfolio, PaperMod]
   # author: Me
-  author: ["Prabhpreet Singh"] # multiple authors
+  author: [*full-name] # multiple authors
   DateFormat: "2 January 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -32,7 +43,7 @@ params:
     # icon: images/profile_pic_bw.jpeg
     # iconHeight: 35
 
-  copyright: © 2024 Prabhpreet Singh
+  copyright: © 2024 *full-name
   copyrightUrl: https://www.prabhpreet332.github.io.com
 
   ShowReadingTime: true
@@ -86,7 +97,7 @@ params:
 
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Prabhpreet Singh
+    title: *full-name
     subtitle: "Hey there \U0001F44B, Welcome to my Digital home !!!"
     imageUrl: "images/profile_pic_bw.jpg"
     imageWidth: 120
