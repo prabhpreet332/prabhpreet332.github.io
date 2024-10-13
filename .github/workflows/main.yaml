@@ -1,0 +1,19 @@
+name: Code push pipeline
+run-name: ${{ github.actor }} triggered the push pipeline 🚀
+on: [push]
+
+jobs:
+  linting:
+    name: Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install the dependencies
+        run: |
+          python3 -m venv venv/
+          source venv/bin/activate
+          pip install -U pip setuptools wheel
+          pip install pre-commit==2.15.0
+          pre-commit install
+          pre-commit run --all
