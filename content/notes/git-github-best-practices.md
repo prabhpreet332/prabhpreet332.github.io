@@ -23,7 +23,7 @@ ShowRssButtonInSectionTermList = true
 UseHugoToc = true
 +++
 
-## Why should you care?
+## Why?
 
 In a single line: It will make the your and your teammates' life easier.
 
@@ -38,16 +38,39 @@ In a single line: It will make the your and your teammates' life easier.
 
 ## Best Practices
 
+
+
 ## 1. Writing Commits
 ### Generic suggestion
-1. Keep you commit size small.
+1. **Keep you commit size small.**
+
 The whole point of having the commits (ie snapshots of your code) is so that you can reference it and revert (if needed) in later point of time. But if you have a commit that has changes in 10 files or a logically complex change, then what's the point.
 
-### Commit Title
+2. **Avoid amending comments.**
 
-### Commit Description
+Amending comments to correct the title, description, or the file changes, is not usually a good idea.
+
+
+### Commit Title and description
+
+1. **Have the commit message in Imperative (commanding) tone.**
+
+Reason: **Git itself uses the imperative whenever it creates a commit on your behalf.** [2]
+
+Eg:
+i. *Add input validation for registration API*
+ii. *Bump minor version from v1.2.3 to 1.3.0*
+
+https://dev.to/jacobherrington/how-to-write-useful-commit-messages-my-commit-message-template-20n9
+
+https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/
+
+2.
+
 
 ### Commit Signing
+
+Always sign the commits. Follow the guide by [GitHub - Commit Signing](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits) and [FreeCodeCamp - What is commit signing in Git?](https://www.freecodecamp.org/news/what-is-commit-signing-in-git/).
 
 ## 2. Branches
 Nameing convention might differ based on the team. But one which you would see commonly is:
@@ -86,3 +109,5 @@ have open mind about the reviews
 
 ## References
 [1] https://graphite.dev/guides/git-branch-naming-conventions#git-branch-name-restrictions
+
+[2] https://cbea.ms/git-commit/
