@@ -138,20 +138,20 @@ minify:
 menu:
   main:
     - identifier: blog
-      name: Blog
+      name: Writings
       url: /posts/
       weight: 10
-    - identifier: notes
-      name: Notes
-      url: /notes/
-      weight: 20
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects/
+    #   weight: 20
     - identifier: tags
       name: Tags
       url: /tags/
       weight: 20
     - identifier: archives
       name: Archives
-      url: /archives/
+      url: /archives
       weight: 30
     - identifier: about
       name: About
