@@ -213,6 +213,9 @@ Some of the checklist items worth considering:
 1. **Open-mindedness**: Early in the career, you will ake mistakes, and its okay.  It important to learn from those mistakes. This learning takes a backseat, the moment you tie up code to your ego. Even for seasoned developers, having an open mind to consider the alternate approach is essential. This would help you grow. Often times, you are surrounded by people with diverse experience, which is great for learning. It is easier said than done, but worth a try.
 
 
+## Conclusion
+
+Hope these suggestion take you a step closer to adopting VCS better. Feel free to discuss these in Discussions.
 
 
 ## References { #references }
