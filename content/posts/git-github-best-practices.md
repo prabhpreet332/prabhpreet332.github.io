@@ -2,7 +2,7 @@
 title = 'Version Control Best Practices'
 date = 2024-10-12T00:45:42+05:30
 description = "Best practices around using the version control softwares like git"
-summary = "Git Best Practices learnt so far in the field."
+summary = "Git Best Practices learnt so far, working in the field."
 draft = false
 tags = ["git", "best-practices"]
 
