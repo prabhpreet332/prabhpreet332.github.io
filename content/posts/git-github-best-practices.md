@@ -31,23 +31,22 @@ In a single line: It will make the your and your teammates' life easier.
 
 ### Disclaimer
 
-1. Many people have written on this topic. I would present my take based on the experiences I had so far. So by all means, this is not an exhaustive list. Feel free to have a discussion about this in the [issues]({{< param "GlobalValues.repository-management.blog-github-issues-url" >}}) / [discussions]({{< param "GlobalValues.repository-management.blog-github-discussions-url" >}}) sections. I would keep updating this list.
+1. Many people have written on this topic. I would present my take based on the experiences I had so far. So by all means, this is not an exhaustive list. Feel free to have a discussion about this in the [Issues]({{< param "GlobalValues.repository-management.blog-github-issues-url" >}}) / [Discussions]({{< param "GlobalValues.repository-management.blog-github-discussions-url" >}}) sections. I would keep updating this list.
 
 1. Many of these suggestion were given to me by my Seniors and Mentors.
 
-1. I am not a expert with these practices and have made many mistakes with these and am still learning.
+1. I am not an expert with these practices and have made many mistakes and am still learning.
 
 1. This is aimed at the devs who are joining the workforce for the first time and for the seasoned devs who might like to have a refresher.
 
 
 ## Best Practices
 
-There are some generic suggestion that would improve the workflow drastically:
+There are some generic suggestions that would improve the workflow drastically:
 
-1. Make sure to use the vendor specific features like Labels & Project (GH) and Milestones (GL) Use Case:
+1. Make sure to use the vendor specific features like Labels & Project (GH) and Milestones (GL). Use Case:
     1. One of the places I am getting to use GitHub Labels is to have the End-of-Quarter or End-of-Month deployments tracking of PRs / Issues.
-    2. Labels also come in handy when you need to filter the PRs that are under review and the ones that needs to be merged.
-    3. Another use case is when we need to group the PRs based on functionality we are implementing which is distributed amongst different developers and need to be merged all to get the feature to work in your internal environment.
+    1. Another use case is when we need to group the PRs based on functionality we are implementing which is distributed amongst different developers and need to be merged all to get the feature to work in your internal environment.
 1. If you are on *nix system and use the ZSH, then definitely try the omz's git plugin. Aliases are a game changer.
         <!-- Some of my most used aliases:
         1. gc: git commit
@@ -64,7 +63,7 @@ There are some generic suggestion that would improve the workflow drastically:
         https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh -->
 1. If the changes that you are planning are huge. Raise a set of [stacked PR/MRs](https://graphite.dev/blog/stacked-prs). Not only it will help you manage the changes, but it will also make your reviewers not hate you. Use tools like [git-machete](https://github.com/VirtusLab/git-machete) to track these if the Centralized VCS does not provide this.
 
-1. It goes without saying that the information that we have: Commits, Branches etc are in formal workspace setting, so typos and grammatical mistakes should be avoided. Any slangs, slurs, discriminatory tone etc in these texts would probably not be accepted and can get you in serious trouble.
+1. It goes without saying that the information that we have: Commits, Branches etc are in formal workspace setting, so typos and grammatical mistakes should be avoided. Any slangs, slurs, discriminatory comments etc in these texts would probably not be accepted and can get you in serious trouble.
 
 ## 1. Writing Commits
 
@@ -83,13 +82,13 @@ Avoid as much as possible.
 
 1. **Have the commit message in Imperative (commanding) tone**
 
-    Reason: **Git itself uses the imperative whenever it creates a commit on your behalf** [[2]]({{< relref "#references" >}})
+    Reason: *Git itself uses the imperative whenever it creates a commit on your behalf* [[2]]({{< relref "#references" >}})
 
     Eg:
     1. *Add input validation for registration API*
     2. *Bump minor version from v1.2.3 to 1.3.0*
 
-    Ideally a commit message should be 50 character long. This is because when you log (`git log`), long commits title gets truncated, loosing the context.
+    Ideally a commit message should be 50 character long. This is because when you log commits (`git log`), long commits titles gets truncated, hence, loosing the context.
 
 1. **Have description for commits with complex or critical changes**
 
@@ -122,7 +121,7 @@ Avoid as much as possible.
     1. *ci*: ci/cd pipeline updates
     1. *perf*: performance related changes
     1. *refactor*: code refactors
-    1. *revert*: revert commits or cherry picking revert commits
+    1. *revert*: reverting the commits
 
     These can vary based on team but above are the general prefix that are used. [[5] [6] [7]]({{< relref "#references" >}})
 
@@ -163,7 +162,7 @@ or
 release/staging-v2.3.4
 ```
 
-Again, it depends on the team. Some teams have ci/cd setup that would work differently based on the branch names, so be careful and consult your teammates before doing anything.
+Again, it depends on the team. Some teams have CI/CD setup that would work differently based on the branch names, so be careful and consult your teammates before doing anything.
 
 It is important to note that there are certain reserved keywords that Git uses like HEAD (which is used to depict the latest commit that we are working on) which are not to be used. [[1]]({{< relref "#references" >}})
 
@@ -187,7 +186,7 @@ feat(registration-api): adds POST API for registering devices ABC-1234
 
 A PR/MR description should have a all the relevant information for someone to understand the changes that have been done. It should include the following sections:
 1. What changes have been done?
-1. Why those changes were done? Is is a new feature (explain it), a bug fix (add tracking ID) or periodic refactoring activity?
+1. Why those changes were done? Is it a new feature (explain it), a bug fix (add tracking ID) or periodic refactoring activity?
 1. Additional resources that were created? Eg: AWS S3 resource might be created and added in IaC code repo. Add these additional PRs/MRs that goes with this change.
 1. Testing scenarios, including the small description about dev level testing that was performed. This would help the reviewer verify the logic.
 1. Miscellaneous information that the Reviewer should be aware of. Eg: The changes in postman collections, relevant documentation etc
@@ -196,26 +195,28 @@ A PR/MR description should have a all the relevant information for someone to un
 
 Probably the most important take away from this writeup: **Make sure your PR/MR is ready before you request a review**.
 
-Please be mindful of your teammates' time. It is annoying, to get the PR/MR and Unit tests are not complete or the test stage in the CI/CD pipeline is breaking or build stage is still throwing errors. Ideally, have a PR/MR templates defined. [[3]]({{< relref "#references" >}}) [[4]]({{< relref "#references" >}})
+Please be mindful of your teammates' time. It is annoying, to get the PR/MR and Unit tests are not complete or the test stage in the CI/CD pipeline is breaking or build stage is still throwing errors. Ideally, have a PR/MR templates defined specific to your team's needs. [[3]]({{< relref "#references" >}}) [[4]]({{< relref "#references" >}})
 
 Some of the checklist items worth considering:
 
 1. **Draft / WIP**: Mark your PR/MR as Draft/WIP if you are not ready for reviews. If Centralized VCS does not have this functionality, just write: `Draft: ` or `WIP: ` in the PR title and update before finalizing.
 
-1. **Rebase with the Default Branch**: Make sure you rebase your branch before you give it off to review. Resolve merge conflicts (if any).
+1. **Rebase with the Default Branch**: Make sure you rebase your branch before you give it off to review. Resolve merge conflicts (if any) before.
 
-1. **CI/CD Pipeline**: Please don't share your PR/MR if the CI/CD stages have not successfully executed. Make sure these execute completely before finalizing. As a reviewer, it is extremely frustrating to review the changes and only to know that some check failed and the assignee needs to rework and so does the reviewer.
+1. **CI/CD Pipeline**: Please don't share your PR/MR if the CI/CD stages have not successfully executed. Make sure these execute completely before finalizing. As a reviewer, it is frustrating to review the changes, only to know that some check failed and the assignee needs to rework and so does the reviewer.
 
-1. **Testing**: When you share your PR, it mean the code works and it will still work when code is merged. So Integration, Smoke testing is must before finalizing. Unit tests, being at the bottom of the testing pyramid, needs to be thorough. Please don't try to do this step in parallel with reviews, unless you are really short in time. Test thoroughly and preferably share the testing scenarios in the comments in PR/MR along with any associated documentation.
+1. **Testing**: When you share your PR, it mean the code works and it will still work when code is merged. So Integration, Smoke testing is must before finalizing. Unit tests, being at the bottom of the testing pyramid, needs to be thorough. Please don't try to do this step in parallel with reviews, unless you are really short in time. Test thoroughly and preferably share the testing scenarios in the comments in PR/MR, along with any associated documentation, to help your reviewer understand and review core logic better.
 
-1. **Self-review**: If you made it this far after raising a PR, congratulations. But you can still make it easier for yourself and your reviewer. SELF REVIEW. Avoid skipping this step. I have personally found that many of the basic issues that my reviewers found, early in my career, were the ones I could have resolved beforehand if I had reviewed my code. This could have prevented multiple rounds of review and unnecessary embarrassment of making silly mistakes.
+1. **Self-review**: If you made it this far after raising a PR, congratulations. But you can still make it easier for yourself and your reviewer. SELF REVIEW. Avoid skipping this step. Early in my career, I have found that many of the basic issues that my reviewers found, were the ones I could have resolved beforehand if I had reviewed my code. This could have prevented multiple rounds of review and unnecessary embarrassment of making silly mistakes.
 
-1. **Open-mindedness**: Early in the career, you will ake mistakes, and its okay.  It important to learn from those mistakes. This learning takes a backseat, the moment you tie up code to your ego. Even for seasoned developers, having an open mind to consider the alternate approach is essential. This would help you grow. Often times, you are surrounded by people with diverse experience, which is great for learning. It is easier said than done, but worth a try.
+1. **Open-mindedness**: Early in the career, you will make mistakes, and its okay.  It important to learn from those mistakes. This learning takes a backseat, the moment you tie up code to your ego. Even for seasoned developers, having an open mind to consider the alternate approach is essential. This would help you grow. Often times, you are surrounded by people with diverse background and experience, which is great for learning. It is easier said than done, but worth a try.
 
 
 ## Conclusion
 
-Hope these suggestion take you a step closer to adopting VCS better. Feel free to discuss these in Discussions.
+Hope these suggestion take you a step closer to adopting VCS better. Feel free to discuss these in [GitHub Discussions]({{< param "GlobalValues.repository-management.blog-github-discussions-url" >}}).
+
+Thank you for reading !!!
 
 
 ## References { #references }
