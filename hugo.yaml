@@ -99,7 +99,7 @@ params:
     enabled: true # needs to be explicitly set
     title: *full-name
     subtitle: "Hey there \U0001F44B, Welcome to my Digital home !!!"
-    imageUrl: "images/profile_pic_bw_small.png"
+    imageUrl: "images/profile_pic_bw_small.jpg"
     imageWidth: 120
     imageHeight: 120
     imageTitle: "Hey, That's me !!"
