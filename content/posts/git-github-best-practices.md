@@ -71,12 +71,12 @@ There are some generic suggestions that would improve the workflow drastically:
 
 1. **Keep you commit size small**
 
-The whole point of having the commits (ie snapshots of your code) is so that you can reference it and revert (if needed) in later point of time. But if you have a commit that has changes in 10 files or a logically complex change, then it become challenging.
+    The whole point of having the commits (ie snapshots of your code) is so that you can reference it and revert (if needed) in later point of time. But if you have a commit that has changes in 10 files or a logically complex change, then it become challenging.
 
 1. **Avoid amending comments**
 
-Amending comments to correct the title, description, or the file changes, is not usually a good practice.
-Avoid as much as possible.
+    Amending comments to correct the title, description, or the file changes, is not usually a good practice.
+    Avoid as much as possible.
 
 ### Commit Title and description
 
