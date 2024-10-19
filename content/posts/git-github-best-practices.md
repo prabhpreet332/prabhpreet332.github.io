@@ -186,7 +186,7 @@ feat(registration-api): adds POST API for registering devices ABC-1234
 
 A PR/MR description should have a all the relevant information for someone to understand the changes that have been done. It should include the following sections:
 1. **What changes have been done?**
-1. **Why those changes were done?** Is it a new feature (explain it), a bug fix (add tracking ID) or periodic refactoring activity?
+1. **Why those changes were done?** Is it a new feature (explain it), a bug fix (add tracking ID, RCA) or periodic refactoring activity (add scope of improvements) etc?
 1. **Additional resources that were created?** Eg: AWS S3 resource might be created and added in IaC code repo. Add these additional PRs/MRs that goes with this change.
 1. **Testing scenarios, including the small description about dev level testing that was performed.** This would help the reviewer verify the logic.
 1. Miscellaneous information that the Reviewer should be aware of. Eg: The changes in postman collections, relevant documentation etc
