@@ -26,7 +26,7 @@ UseHugoToc = true
 
 ## Why?
 
-In a single line: It will make the your and your teammates' life easier.
+In a single line: It will make your and your teammates' life easier.
 
 
 ### Disclaimer
@@ -172,7 +172,7 @@ It is important to note that there are certain reserved keywords that Git uses l
 
 #### Title
 
-The Title just like many other entities depends on your team. Consult teammates for the appropriate PR/MR Titles.
+The Title just like many other entities depends on your team. Consult your teammates for the appropriate PR/MR Titles.
 
 Commonly used title:
 
@@ -184,12 +184,15 @@ feat(registration-api): adds POST API for registering devices ABC-1234
 ```
 #### Description
 
-A PR/MR description should have a all the relevant information for someone to understand the changes that have been done. It should include the following sections:
-1. What changes have been done?
-1. Why those changes were done? Is it a new feature (explain it), a bug fix (add tracking ID) or periodic refactoring activity?
-1. Additional resources that were created? Eg: AWS S3 resource might be created and added in IaC code repo. Add these additional PRs/MRs that goes with this change.
-1. Testing scenarios, including the small description about dev level testing that was performed. This would help the reviewer verify the logic.
-1. Miscellaneous information that the Reviewer should be aware of. Eg: The changes in postman collections, relevant documentation etc
+A PR/MR description should have a all the relevant information for someone to understand the changes that have been done. Your 10 - 15 minutes of effort on description would save 30 - 45 minutes of reviewer.
+
+It should include the following sections:
+
+1. **What changes have been done?**
+1. **Why those changes were done?** Is it a new feature (explain it), a bug fix (add tracking ID, RCA) or periodic refactoring activity (add scope of improvements) etc?
+1. **Additional resources that were created?** Eg: AWS S3 resource might be created and added in IaC code repo. Add these additional PRs/MRs that goes with this change.
+1. **Testing scenarios, including the small description about dev level testing that was performed.** This would help the reviewer verify the logic.
+1. Miscellaneous information that the reviewer should be aware of. Eg: The changes in postman collections, relevant documentation updates, link to the environments etc.
 
 ### Before giving it off for review
 
@@ -199,15 +202,15 @@ Please be mindful of your teammates' time. It is annoying, to get the PR/MR and 
 
 Some of the checklist items worth considering:
 
-1. **Draft / WIP**: Mark your PR/MR as Draft/WIP if you are not ready for reviews. If Centralized VCS does not have this functionality, just write: `Draft: ` or `WIP: ` in the PR title and update before finalizing.
+1. **Draft / WIP**: Mark your PR/MR as `Draft`/`WIP`, if you are not ready for reviews. If Centralized VCS does not have this functionality, just write: `Draft: ` or `WIP: ` in the PR title and update before finalizing.
 
-1. **Rebase with the Default Branch**: Make sure you rebase your branch before you give it off to review. Resolve merge conflicts (if any) before.
+1. **Rebase with the Default/Source Branch**: Make sure you rebase your branch before you give it off to review. Resolve merge conflicts (if any) before.
 
 1. **CI/CD Pipeline**: Please don't share your PR/MR if the CI/CD stages have not successfully executed. Make sure these execute completely before finalizing. As a reviewer, it is frustrating to review the changes, only to know that some check failed and the assignee needs to rework and so does the reviewer.
 
-1. **Testing**: When you share your PR, it mean the code works and it will still work when code is merged. So Integration, Smoke testing is must before finalizing. Unit tests, being at the bottom of the testing pyramid, needs to be thorough. Please don't try to do this step in parallel with reviews, unless you are really short in time. Test thoroughly and preferably share the testing scenarios in the comments in PR/MR, along with any associated documentation, to help your reviewer understand and review core logic better.
+1. **Testing**: When you share your PR, it mean the code works and it will still work when code is merged. So Integration, Smoke testing is must before finalizing. Unit tests, being at the bottom of the testing pyramid, needs to be thorough with sufficient Quality Coverage. **Please don't try to do this step in parallel with reviews, unless you are really short in time.** Test thoroughly and preferably share the testing scenarios in the comments in PR/MR, along with any associated documentation, to help your reviewer understand and review the core logic better.
 
-1. **Self-review**: If you made it this far after raising a PR, congratulations. But you can still make it easier for yourself and your reviewer. SELF REVIEW. Avoid skipping this step. Early in my career, I have found that many of the basic issues that my reviewers found, were the ones I could have resolved beforehand if I had reviewed my code. This could have prevented multiple rounds of review and unnecessary embarrassment of making silly mistakes.
+1. **Self-review**: If you made it this far after raising a PR, congratulations. But you can still make it easier for yourself and your reviewer. SELF REVIEW. Avoid skipping this step. Early in my career, I have found that many of the basic issues that my reviewers found, were the ones I could have resolved beforehand if I had reviewed my code. This could have prevented multiple rounds of review and unnecessary embarrassment of making silly mistakes. Remember: **You get things done faster, when you go slow.**
 
 1. **Open-mindedness**: Early in the career, you will make mistakes, and its okay.  It important to learn from those mistakes. This learning takes a backseat, the moment you tie up code to your ego. Even for seasoned developers, having an open mind to consider the alternate approach is essential. This would help you grow. Often times, you are surrounded by people with diverse background and experience, which is great for learning. It is easier said than done, but worth a try.
 
