@@ -195,7 +195,7 @@ A PR/MR description should have a all the relevant information for someone to un
 
 Probably the most important take away from this writeup: **Make sure your PR/MR is ready before you request a review**.
 
-Please be mindful of your teammates' time. It is annoying, to get the PR/MR and Unit tests are not complete or the test stage in the CI/CD pipeline is breaking or build stage is still throwing errors. Ideally, have a PR/MR templates defined specific to your team's needs. [[3]]({{< relref "#references" >}}) [[4]]({{< relref "#references" >}})
+Please be mindful of your teammates' time. It is annoying, to get the PR/MR and Unit tests are not complete or the test stage in the CI/CD pipeline is breaking or build stage is still throwing errors. Ideally, have a PR/MR templates defined specific to your team's needs. [[3]]({{< relref "#references" >}}) [[4]]({{< relref "#references" >}}) Checkout [this template](https://axolo.co/blog/p/part-3-github-pull-request-template), if you need ideas.
 
 Some of the checklist items worth considering:
 
