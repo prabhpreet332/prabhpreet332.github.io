@@ -45,7 +45,7 @@ In a single line: It will make your and your teammates' life easier.
 There are some generic suggestions that would improve the workflow drastically:
 
 1. Make sure to use the vendor specific features like Labels & Project (GH) and Milestones (GL). Use Case:
-    1. One of the places I am getting to use GitHub Labels is to have the End-of-Quarter or End-of-Month deployments tracking of PRs / Issues.
+    1. One way I have utilized GitHub Labels is to track pull requests and issues for End-of-Quarter or End-of-Month deployments.
     1. Another use case is when we need to group the PRs based on functionality we are implementing which is distributed amongst different developers and need to be merged all to get the feature to work in your internal environment.
 1. If you are on *nix system and use the ZSH, then definitely try the omz's git plugin. Aliases are a game changer.
         <!-- Some of my most used aliases:
